@@ -1,0 +1,84 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.lightbox {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(214, 214, 214);
+}
+
+.lightbox__img {
+    width: 25rem;
+    border: 1rem solid rgb(219, 219, 219);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px 10px rgb(187, 187, 187);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lightbox__img:hover {
+    transform: scale(0.8);
+}
+
+.grande {
+    width: 50rem;
+    border: 1rem solid rgb(219, 219, 219);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px 10px rgb(187, 187, 187);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.lightbox__close {
+    background-color: rgb(214, 214, 214);
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 15px 10px rgb(187, 187, 187);
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+}
+
+.lightbox__close:hover {
+    transform: scale(0.9);
+}
+
+.lightbox__close--oculto {
+    display: none;
+}
+
+.efectotransicion {
+    transition: opacity 1s ease;
+}
+
+.efectoEntrada {
+    animation: entrada 1s ease-in-out;
+}
+
+.efectoSalida {
+    animation: salida 1s ease-in-out;
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0.8;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes salida {
+    from {
+        opacity: 0.8;
+    }
+    to{
+        opacity: 1;
+    }
+}
